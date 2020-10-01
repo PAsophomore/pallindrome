@@ -1,29 +1,22 @@
-/* package codechef; // don't place package name! */
+/*package whatever //do not write package name here */
 
-import java.util.*;
-import java.lang.*;
 import java.io.*;
-
-/* Name of the class has to be "Main" only if the class is public. */
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		  
-  int r,sum=0,temp;    
-  int n=454;//It is the number variable to be checked for palindrome  
-  
-  temp=n;    
-  while(n>0){    
-   r=n%10;  //getting remainder  
-   sum=(sum*10)+r;    
-   n=n/10;    
-  }    
-  if(temp==sum)    
-   System.out.println("palindrome number ");    
-  else    
-   System.out.println("not palindrome");    
-  
+import java.util.*;
+class pallindrome {
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		//System.out.println("Enter a number to check pallindrome");
+		int n=sc.nextInt();
+		int i=n;
+		int rev=0;
+		while(i>0){
+		    int d=i%10;
+		    rev=rev*10+d;
+                    i/=10;
+		}
+		if(rev==n)
+		System.out.println("Number is pallindrome");
+		else 
+		System.out.println("Number is not a pallindrome number");
 	}
 }
